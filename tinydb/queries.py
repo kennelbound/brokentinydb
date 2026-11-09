@@ -451,7 +451,7 @@ class Query(QueryInstance):
 
         else:
             def test(value):
-                return is_sequence(value) and all(e in cond for e in value)
+                return is_sequence(value) and all(e in value for e in cond)
 
         return self._generate_test(
             lambda value: test(value),

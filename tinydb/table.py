@@ -159,6 +159,7 @@ class Table:
 
             # We also reset the stored next ID so the next insert won't
             # re-use document IDs by accident when storing an old value
+            self._next_id = None
         else:
             # In all other cases we use the next free ID
             doc_id = self._get_next_id()

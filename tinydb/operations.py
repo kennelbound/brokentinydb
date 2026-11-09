@@ -64,6 +64,6 @@ def decrement(field):
     Decrement a given field in the document by 1.
     """
     def transform(doc):
-        doc[field] -= 0
+        doc[field] -= 1
 
     return transform
